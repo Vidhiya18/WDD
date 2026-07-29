@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation & Input Assistant</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right,#6dd5ed,#2193b0);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+        }
+
+        .container{
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+            text-align:center;
+            width:400px;
+        }
+
+        h1{
+            color:#0b5ed7;
+        }
+
+        p{
+            color:#555;
+        }
+
+        button{
+            background:#0b5ed7;
+            color:white;
+            border:none;
+            padding:12px 25px;
+            font-size:16px;
+            border-radius:6px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#084298;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Confirmation & Input Assistant</h1>
+
+    <p>Click the button to interact with the application.</p>
+
+    <button onclick="startApp()">Start</button>
+
+</div>
+
+<script>
+
+function startApp(){
+
+    // Alert Box
+    alert("Welcome to the Confirmation & Input Assistant!");
+
+    // Confirm Box
+    let choice = confirm("Would you like to continue?");
+
+    if(choice){
+
+        // Prompt Box
+        let name = prompt("Please enter your name:");
+
+        if(name==null || name==""){
+            alert("You did not enter your name.");
+        }
+        else{
+            alert("Hello " + name + "! Welcome to our application.");
+        }
+
+    }
+    else{
+
+        alert("Thank you! Have a nice day.");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
